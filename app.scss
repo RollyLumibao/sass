@@ -1,0 +1,67 @@
+$background-color-button:#160a85;
+$background-color-button-font:#FFFFFF;
+
+body ,html {
+	margin:0;
+}
+/* button color */
+.button{
+	background-color: $background-color-button;
+	border-radius:5px;
+	color:$background-color-button-font;
+	display:inline-block;
+	padding:15px;
+	text-decoration:none;
+}
+/* navigation wrapper */
+.nav-wrapper{
+	width:100%;
+	margin:auto;
+	border-bottom:4px solid black;
+}
+
+/* first menu level*/
+.nav ul
+{
+	list-style-type:none;
+		li{
+		display:inline-block;
+			a{
+				@extend .button
+			 }	
+				:hover{
+					background-color:blue;
+			          }		
+			 }
+}  
+/* second menu level*/
+.nav ul li ul{        /*-----> nav list in unoreder list */
+	display:none;
+	font-size:12px;
+	position: absolute;
+	margin:0;
+	padding:0;
+		li {
+		 display: block;
+	 }
+}	
+
+.nav ul li:hover ul {
+	display: block;
+  	  ul{
+		display: none;
+	} 
+}
+
+/* third level*/
+.nav ul ul li:hover ul{
+	left: 77px;
+	top:45px;
+	display: block;
+	       li{
+			font-size: 12px;
+	        }
+	          a{
+                display: block;
+	           }
+ }	
